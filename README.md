@@ -12,4 +12,4 @@ A browser-based fishing game with AI companion system.
 HTML / CSS / JavaScript / Canvas
 
 ## Demo
-(放GitHub Pages链接)
+https://xiuxxx0.github.io/ai-fishing-game/
