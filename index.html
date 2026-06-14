@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能NPC队友 - 捕鱼小游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="game-main">
+            <div id="game-header">
+                <div class="header-item"><span class="label">🎯 分数</span><span id="score-display" class="value">0</span></div>
+                <div class="header-item"><span class="label">🔥 连击</span><span id="combo-display" class="value">x0</span></div>
+                <div class="header-item"><span class="label">⏱ 时间</span><span id="time-display" class="value">00:00</span></div>
+                <div class="header-item"><span class="label">🎮 状态</span><span id="player-status" class="value status-balanced">平衡</span></div>
+                <div class="header-item"><span class="label">🤖 AI</span><span id="ai-status" class="value status-active">活跃</span><span class="label" style="margin-left:8px">💭</span><span id="emotion-display" class="value" style="font-size:11px;color:#a78bfa">😐平静</span><span class="label" style="margin-left:8px">🤝</span><span id="relationship-display" class="value" style="font-size:12px;color:#fbbf24">队友 (50)</span><span class="label" style="margin-left:8px">💚</span><span id="trust-display" class="value" style="font-size:11px;color:#fbbf24">信任50</span></div>
+            </div>
+            <canvas id="game-canvas"></canvas>
+            <div id="game-footer"><span>🖱 点击画布发射子弹 | AI队友与你并肩作战</span></div>
+        </div>
+        <div id="side-panel">
+            <div id="chat-panel">
+                <div id="chat-header"><span class="ai-icon">🤖</span><span>AI 队友聊天</span></div><div id="feedback-bar" style="display:flex;gap:6px;padding:6px 10px;background:#1a2332;border-bottom:1px solid #1e293b"><button id="btn-like" style="flex:1;padding:4px 6px;background:#166534;color:#4ade80;border:1px solid#22c55e;border-radius:4px;cursor:pointer;font-size:11px">👍 点赞</button><button id="btn-ignore" style="flex:1;padding:4px 6px;background:#1e293b;color:#94a3b8;border:1px solid#334155;border-radius:4px;cursor:pointer;font-size:11px">⏭ 忽略</button><button id="btn-dislike" style="flex:1;padding:4px 6px;background:#450a0a;color:#f87171;border:1px solid#991b1b;border-radius:4px;cursor:pointer;font-size:11px">❌ 不喜欢</button></div>
+                <div id="chat-messages"></div>
+            </div>
+            <div id="stats-panel">
+                <div class="stats-title">📊 战斗统计</div>
+                <div class="stat-row"><span>玩家命中率</span><span id="stat-player-accuracy">0%</span></div>
+                <div class="stat-row"><span>AI命中率</span><span id="stat-ai-accuracy">0%</span></div>
+                <div class="stat-row"><span>玩家击杀</span><span id="stat-player-kills">0</span></div>
+                <div class="stat-row"><span>AI击杀</span><span id="stat-ai-kills">0</span></div>
+                <div class="stat-row"><span>Boss击杀</span><span id="stat-boss-kills">0</span></div><div class="stats-divider" style="border-top:1px solid#1e293b;margin:6px 0"></div><div class="stats-title">🧬 性格进化</div><div class="stat-row"><span>当前人格</span><span id="evolve-style" style="color:#a78bfa">⚡活跃</span></div><div class="stat-row"><span>进化值</span><span id="evolve-mood" style="color:#94a3b8">0</span></div><div class="stat-row"><span>游戏时长</span><span id="evolve-time" style="color:#94a3b8">0轮</span></div><div class="stats-divider" style="border-top:1px solid#1e293b;margin:6px 0"></div><div class="stats-title">🧠 学习反馈</div><div class="stat-row"><span>👍 点赞</span><span id="learning-likes" style="color:#4ade80">0</span></div><div class="stat-row"><span>⏭ 忽略</span><span id="learning-ignores" style="color:#94a3b8">0</span></div><div class="stat-row"><span>❌ 不喜欢</span><span id="learning-dislikes" style="color:#f87171">0</span></div><div class="stats-divider" style="border-top:1px solid#1e293b;margin:6px 0"></div><div class="stats-title">💝 AI互动</div><div class="stat-row"><span>👍 AI点赞</span><span id="ai-likes-given" style="color:#fbbf24">0</span></div><div class="stat-row"><span>🎁 收到礼物</span><span id="gifts-received" style="color:#ffd700">0</span></div><div class="stat-row"><span>🧠 倾向值</span><span id="learning-bias" style="color:#94a3b8">0.0</span></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
