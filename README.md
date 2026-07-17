@@ -66,6 +66,12 @@ https://xiuxxx0.github.io/ai-fishing-game/
 
 ---
 
+## 📸 Screenshot / 游戏截图
+
+<img width="1911" height="943" alt="屏幕截图 2026-07-17 185659" src="https://github.com/user-attachments/assets/c19dd8c9-99b1-4ccf-b8e2-b07ee3ec0ecf" />
+<img width="1911" height="937" alt="屏幕截图 2026-07-17 185752" src="https://github.com/user-attachments/assets/0f794e1a-06dc-496c-bab0-cf8d90d7290e" />
+
+---
 
 
 ## 📂 Project Structure / 项目结构
